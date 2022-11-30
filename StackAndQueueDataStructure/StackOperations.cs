@@ -43,8 +43,11 @@ namespace StackAndQueueDataStructure
         }
         public void IsEmpty()
         {
-            peek();
-            pop();
+            while(top!=null)
+            {
+              peek();
+              pop();
+            }
         }
         public void display()
         {
