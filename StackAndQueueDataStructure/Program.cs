@@ -17,6 +17,8 @@ namespace StackAndQueueDataStructure
             s.push(30);
             s.push(56);
             s.display();
+            s.IsEmpty();
+            s.display();
             Console.ReadLine();
         }
     }

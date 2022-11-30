@@ -24,6 +24,28 @@ namespace StackAndQueueDataStructure
                 Console.WriteLine("{0} is pushed into the stack", item.data);
             }
         }
+        public void peek()
+        {
+            if (top == null)
+                Console.WriteLine("stack is empty");
+            else
+                Console.WriteLine(top.data+" is at the top of the stack");
+        }
+        public void pop()
+        {
+            if (top == null)
+                Console.WriteLine("stack is empty,hence pop operation is not possible");
+            else
+            {
+                Console.WriteLine("\n{0} poped from the stack", top.data);
+                top = top.next;
+            }
+        }
+        public void IsEmpty()
+        {
+            peek();
+            pop();
+        }
         public void display()
         {
             Node temp = top;
@@ -33,9 +55,10 @@ namespace StackAndQueueDataStructure
             }
             else
             {
+                Console.WriteLine("stack elements are");
                 while (temp != null)
                 {
-                    Console.WriteLine(temp.data+" ");
+                    Console.WriteLine("\n"+temp.data+" ");
                     temp=temp.next;
                 }
             }
