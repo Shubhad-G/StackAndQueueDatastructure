@@ -43,25 +43,47 @@ namespace StackAndQueueDataStructure
         }
         public void IsEmpty()
         {
-            peek();
-            pop();
+            while (top != null)
+            {
+                peek();
+                pop();
+            }
         }
         public void display()
         {
             Node temp = top;
             if(temp == null)
             {
-                Console.WriteLine("stack is empty");
+                Console.WriteLine("empty");
             }
             else
             {
-                Console.WriteLine("stack elements are");
+                Console.WriteLine("elements are");
                 while (temp != null)
                 {
                     Console.WriteLine("\n"+temp.data+" ");
                     temp=temp.next;
                 }
             }
+        }
+        public void Enqueue(int data)
+        {
+            Node item = new Node(data);
+            if (top == null)
+            {
+                top = item;
+                Console.WriteLine("{0} is added to the queue", top.data);
+            }
+            else
+            {
+                Node temp=top;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = item;
+            }
+            Console.WriteLine("{0} is added to the queue", item.data);
         }
     }
 }
