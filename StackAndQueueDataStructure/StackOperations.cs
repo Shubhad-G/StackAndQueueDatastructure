@@ -43,12 +43,18 @@ namespace StackAndQueueDataStructure
         }
         public void IsEmpty()
         {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 939cf2302caa4a822fd74a36a31eb0e84fd0da7a
             while(top!=null)
             {
               peek();
               pop();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 939cf2302caa4a822fd74a36a31eb0e84fd0da7a
             }
         }
         public void display()
