@@ -35,6 +35,10 @@ namespace StackAndQueueDataStructure
                         s.Enqueue(qElement);
                         break;
 
+                    case 4:
+                        s.Dequeue();
+                        break;
+
                     case 5:
                         s.display();
                         break;
